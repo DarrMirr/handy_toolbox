@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.github.darrmirr.handy_toolbox</id>
+    <name>Handy ToolBox</name>
+    <vendor email="polukeev.v.s@yandex.ru" url="http://www.github.com/darrmirr">Darr Mirr</vendor>
+
+    <description><![CDATA[Handy toolbox for daily developer routine]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <idea-version since-build="181.00"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow id="Handy toolbox" secondary="true" icon="AllIcons.General.Modified" anchor="right"
+                    factoryClass="com.github.darrmirr.ToolBoxWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

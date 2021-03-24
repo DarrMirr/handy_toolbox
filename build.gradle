@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.7.2'
+}
+
+group 'com.github.darrmirr'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    jackson_version = '2.11.4'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "${jackson_version}"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2020.3.2'
+    type = ['IC', 'IU']
+    pluginName = 'handy toolbox'
+}
+
+patchPluginXml {
+    sinceBuild = '181.00'
+    changeNotes """"""
+}
+test {
+    useJUnitPlatform()
+}
